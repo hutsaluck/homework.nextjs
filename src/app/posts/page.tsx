@@ -1,11 +1,13 @@
-import {UsersComponent} from "@/components/UsersComponent";
+import {PostsComponent} from "@/components/PostsComponent";
+import {MenuComponent} from "@/components/MenuComponent";
 
-const UsersPage = () => {
+const PostsPage = () => {
     return (
-        <div>
-            <UsersComponent/>
-        </div>
+        <>
+            <MenuComponent/>
+            <PostsComponent/>
+        </>
     );
 };
 
-export default UsersPage;
+export default PostsPage;

@@ -1,8 +1,9 @@
 import {FC} from "react";
 import {Metadata} from "next";
 import {SearchParams} from "next/dist/server/request/search-params";
-import {IUser} from "@/models/IUser";
-import {UserPageComponent} from "@/components/UserPageComponent";
+import {IPost} from "@/models/IPost";
+import {PostPageComponent} from "@/components/PostPageComponent";
+import {MenuComponent} from "@/components/MenuComponent";
 
 type Props = {
     params: Promise<{id: string}>,
@@ -13,24 +14,25 @@ export const generateMetadata = async ({params}:Props): Promise<Metadata> => {
     const {id} = await params
 
     return {
-        title: `User Page ${id}`
+        title: `Post Page ${id}`
     }
 }
-const UserPage:FC<Props> = async ({searchParams}) => {
+const PostPage:FC<Props> = async ({searchParams}) => {
     const {data} = await searchParams
-    let user: IUser | null = null
+    let post: IPost | null = null
     if (typeof data === "string") {
-        user = JSON.parse(data) as IUser
+        post = JSON.parse(data) as IPost
     }
 
 
     return (
         <div>
-            {user && (
-                <UserPageComponent user={user}/>
+            <MenuComponent/>
+            {post && (
+                <PostPageComponent post={post}/>
             )}
         </div>
     );
 };
 
-export default UserPage;
+export default PostPage;
