@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cars API Project
 
-## Getting Started
+## Опис
+Цей проєкт передбачає створення веб-додатку, який взаємодіє з API для отримання та створення автомобілів.
 
-First, run the development server:
+## API Документація
+Перед початком роботи ознайомтеся з документацією API за наступними посиланнями:
+- [Основна URL](http://owu.linkpc.net/carsAPI/v1/doc)
+- [Запасна URL](http://185.69.152.209/carsAPI/v1/doc) (якщо основна не працює)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Функціонал
+1. **Сторінка списку автомобілів**
+    - Виводить всі автомобілі (з мінімальною інформацією).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Сторінка з формою для створення автомобіля**
+    - Дозволяє додавати нові об'єкти `car` через API.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. **Сервіси для роботи з API**
+    - Окремий сервіс для отримання списку автомобілів.
+    - Окремий сервіс для створення нового автомобіля.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Обмеження
+- **Server Actions** не можуть бути використані для запису в базу даних.
+- **Server Actions** можна використовувати для запитів до API від імені сервера.
 
-## Learn More
+## Встановлення та запуск
+1. **Клонування репозиторію**:
+   ```sh
+   git clone <repo-url>
+   cd <repo-folder>
+   ```
+2. **Встановлення залежностей**:
+   ```sh
+   npm install
+   ```
+3. **Запуск проєкту**:
+   ```sh
+   npm run dev
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+## Технології
+- Next.js / React
+- TypeScript (за необхідності)
+- Axios для роботи з API
+- Tailwind CSS / Bootstrap (опціонально для стилізації)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Контакти
+Якщо у вас виникли питання, звертайтесь до автора проєкту.
